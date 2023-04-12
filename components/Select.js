@@ -17,7 +17,7 @@ const Select = ({optionsList = [], defaultValue, value = "", changeValue}) => {
             <option disabled value="">{defaultValue}</option>
             {optionsList.map(option =>
                 <option
-                    key={option.id}
+                    key={option.id || option.slug}
                     value={option.id || option.slug}
                 >{option.name}</option>
             )}
@@ -25,4 +25,4 @@ const Select = ({optionsList = [], defaultValue, value = "", changeValue}) => {
     );
 };
 
-export default React.memo(Select);
+export default Select;

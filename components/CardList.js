@@ -8,7 +8,7 @@ const CardListI = styled.div`
   grid-template-columns: repeat(1, 1fr);
   gap: 20px;
   padding: 10px 0;
-  
+
   @media (min-width: 500px) {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -26,16 +26,16 @@ const CardListI = styled.div`
 const CardList = ({cards = []}) => {
     return (
         <CardListI>
-            {cards.map(card =>
-                <Link href={`/game/${card.slug}`}>
-                    <Card
-                        key={card.id}
-                        poster={card.background_image}
-                        title={card.name}
-                        date={card.released}
-                        rating={card.rating}
-                    />
-                </Link>
+            {cards.map(card => {
+                    return <Link href={`/game/${card.slug}`} key={card.id}>
+                        <Card
+                            poster={card.background_image}
+                            title={card.name}
+                            date={card.released}
+                            rating={card.rating}
+                        />
+                    </Link>
+                }
             )}
         </CardListI>
     );

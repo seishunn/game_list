@@ -36,6 +36,7 @@ const CardTitle = styled.div`
 `
 
 const Card = ({poster = "", title = "", rating = 0, date = "", ...props}) => {
+
     return (
         <CardI {...props}>
             <div>
