@@ -113,7 +113,7 @@ const Wrapper = styled.div`
   }
 `
 
-export default function ({game, screenshots}) {
+export default function CardPage ({game, screenshots}) {
     const router = useRouter();
     const [fullSize, setFullSize] = useState(false);
 
